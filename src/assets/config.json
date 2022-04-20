@@ -1,0 +1,122 @@
+{
+    "paymentorder": {
+        "operation": "Purchase",
+        "currency": "SEK",
+        "amount": 1500,
+        "vatAmount": 375,
+        "description": "Test Purchase",
+        "userAgent": "Mozilla/5.0...",
+        "language": "sv-SE",
+        "productName": "Checkout3",
+        "urls": {
+            "hostUrls": [ "https://example.com", "https://example.net" ], 
+            "completeUrl": "https://example.com/payment-completed",
+            "cancelUrl": "https://example.com/payment-cancelled",
+            "callbackUrl": "https://api.example.com/payment-callback",
+            "termsOfServiceUrl": "https://example.com/termsandconditoons.pdf",
+            "logoUrl": "https://example.com/logo.png" 
+        },
+        "payeeInfo": {
+            "payeeId": "3684be11-32a0-4c6c-8237-9c209550983b",
+            "payeeReference": "3233",
+            "payeeName": "Merchant1",
+            "productCategory": "A123",
+            "orderReference": "or-123456",
+            "subsite": "MySubsite"
+        },
+        "payer": {
+            "digitalProducts": false,
+            "firstName": "Leia",
+            "lastName": "Ahlström",
+            "email": "leia@payex.com",
+            "msisdn": "+46787654321",
+            "payerReference": "AB1234",
+            "shippingAddress": {
+                "firstName": "firstname/companyname",
+                "lastName": "lastname",
+                "email": "karl.anderssson@mail.se",
+                "msisdn": "+46759123456",
+                "streetAddress": "string",
+                "coAddress": "string",
+                "city": "Solna",
+                "zipCode": "17674",
+                "countryCode": "SE"
+            },
+            "billingAddress": {
+                "firstName": "firstname/companyname",
+                "lastName": "lastname",
+                "email": "karl.anderssson@mail.se",
+                "msisdn": "+46759123456",
+                "streetAddress": "string",
+                "coAddress": "string",
+                "city": "Solna",
+                "zipCode": "17674",
+                "countryCode": "SE"
+            },
+            "accountInfo": {
+                "accountAgeIndicator": "04",
+                "accountChangeIndicator": "04",
+                "accountPwdChangeIndicator": "01",
+                "shippingAddressUsageIndicator": "01",
+                "shippingNameIndicator": "01",
+                "suspiciousAccountActivity": "01"
+            }
+        },
+        "swish": {
+            "paymentRestrictedToAgeLimit": 18,
+            "paymentRestrictedToSocialSecurityNumber": "199710202392"
+            },
+        "orderItems": [
+            {
+                "reference": "P1",
+                "name": "Product1",
+                "type": "PRODUCT",
+                "class": "ProductGroup1",
+                "itemUrl": "https://example.com/products/123",
+                "imageUrl": "https://example.com/product123.jpg",
+                "description": "Product 1 description",
+                "discountDescription": "Volume discount",
+                "quantity": 5,
+                "quantityUnit": "pcs",
+                "unitPrice": 300,
+                "discountPrice": 0,
+                "vatPercent": 2500,
+                "amount": 1500,
+                "vatAmount": 375
+            },
+            {
+                "reference": "I1",
+                "name": "InvoiceFee",
+                "type": "PAYMENT_FEE",
+                "class": "Fees",
+                "description": "Fee for paying with Invoice",
+                "quantity": 1,
+                "quantityUnit": "pcs",
+                "unitPrice": 1900,
+                "vatPercent": 0,
+                "amount": 1900,
+                "vatAmount": 0,
+                "restrictedToInstruments": [
+                    "Invoice-PayExFinancingSe"
+                ]
+            }
+        ],
+        "riskIndicator": {
+            "deliveryEmailAddress": "olivia.nyhuus@payex.com",
+            "deliveryTimeFrameIndicator": "01",
+            "preOrderDate": "19801231",
+            "preOrderPurchaseIndicator": "01",
+            "shipIndicator": "01",
+            "giftCardPurchase": false,
+            "reOrderPurchaseIndicator": "01",
+            "pickUpAddress": {
+                "name": "Olivia Nyhus",
+                "streetAddress": "Saltnestoppen 43",
+                "coAddress": "",
+                "city": "Saltnes",
+                "zipCode": "1642",
+                "countryCode": "NO"
+            }
+        }
+    }
+}
